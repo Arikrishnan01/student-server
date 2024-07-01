@@ -3,7 +3,7 @@ import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 
 /** new user register */
-export const register =async (req, res) => {
+export const register = async(req, res) => {
     try{
         const { name, email, password } = req.body;
 
@@ -40,7 +40,7 @@ export const register =async (req, res) => {
 }
 
 /** login user */
-export const login =async (req, res) => {
+export const login =async(req, res) => {
     try{
         const { email, password } = req.body;
         const User = await userModel.findOne({ email });
